@@ -85,8 +85,17 @@ def prompt():
         while action.lower() not in acceptable_actions:
             print('Unknown action, try again.\n')
             action = input('> ')
+        if action.lower() == 'quit':
+            sys.exit()
+        elif action.lower() in ['move','go','travel','walk']:
+            player_move(action.lower())
+        elif action.lower() in ['examine', 'inspect', 'interact', 'look']:
+            player_examine(action.lower())
 
-
+def player_move(myAction):
+    ask = 'Where would you like to move to?\n'
+    dest = input(ask)
+    if dest == 
 
 
 
